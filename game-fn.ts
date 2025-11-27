@@ -22,16 +22,27 @@ function moveRight() {
 	}
 }
 function moveLeft() {
-	if (colfn > 0) colfn--;
+	if (colfn > 0){ colfn--;
 	movefn.push(boardfn[rowfn][colfn]);
+}	else {
+	console.log("Invalid move");
+	}
 }
+
 function moveUp() {
-	if (rowfn > 0) rowfn--;
+	if (rowfn > 0){ rowfn--;
 	movefn.push(boardfn[rowfn][colfn]);
+}	else {
+	console.log("Invalid move");
+	}
 }
+
 function moveDown() {
-	if (rowfn < rowLength) rowfn++;
+	if (rowfn < rowLength) {rowfn++;
 	movefn.push(boardfn[rowfn][colfn]);
+} else {
+	console.log("Invalid move");
+	}
 }
 // Call the movement functions
 moveRight(); // Move from A to B
